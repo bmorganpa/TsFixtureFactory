@@ -1,0 +1,30 @@
+{
+  "name": "tsfixturefactory",
+  "version": "1.0.0",
+  "description": "Easy typescript fixture data",
+  "main": "lib/index.js",
+  "typings": "lib/index",
+  "scripts": {
+    "compile": "yarn rimraf 'lib/*' && ./node_modules/.bin/tsc -p ./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bmorganpa/TsFixtureFactory.git"
+  },
+  "keywords": [
+    "fixture",
+    "typescript",
+    "tests",
+    "mock"
+  ],
+  "author": "Brad Morgan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bmorganpa/TsFixtureFactory/issues"
+  },
+  "homepage": "https://github.com/bmorganpa/TsFixtureFactory#readme",
+  "devDependencies": {
+    "rimraf": "^3.0.0",
+    "typescript": "^3.7.4"
+  }
+}
