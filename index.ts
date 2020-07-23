@@ -45,13 +45,10 @@ function resolveFactories<T>(
 }
 
 function resolveFactory<T>(value?: T | FixtureFactory<T>): T | undefined {
-  if (!value) {
-    return undefined;
-  }
   return instanceOfFixtureFactory<T>(value) ? value() : value;
 }
 
 function instanceOfFixtureFactory<T>(object: any): object is FixtureFactory<T> {
-  return Object.getOwnPropertySymbols(object).includes(factorySymbol);
+  return object && Object.getOwnPropertySymbols(object).includes(factorySymbol);
 }
 
